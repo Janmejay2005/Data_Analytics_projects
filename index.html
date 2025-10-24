@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio | Data Analytics & Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#data-analytics">Data Analytics</a>
+                <a href="#web-dev">Web Development</a>
+                <a href="#designs">Designs</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Welcome to My Portfolio</h1>
+            <p class="fade-in">Exploring the intersection of Data Analytics, Web Development, and Design</p>
+        </div>
+    </section>
+
+    <section id="data-analytics" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Data Analytics Projects</h2>
+            <div class="projects-grid">
+                <!-- Add your Data Analytics projects here -->
+                <div class="project-card fade-in">
+                    <img src="placeholder-da1.jpg" alt="Data Analytics Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3>Project Title</h3>
+                        <p>Description of your data analytics project. Include key insights and technologies used.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> View Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="web-dev" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Web Development Projects</h2>
+            <div class="projects-grid">
+                <!-- Add your Web Development projects here -->
+                <div class="project-card fade-in">
+                    <img src="placeholder-web1.jpg" alt="Web Development Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3>Project Title</h3>
+                        <p>Description of your web development project. Include technologies and key features.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> View Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="designs" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Design Projects</h2>
+            <div class="projects-grid">
+                <!-- Figma Designs -->
+                <div class="project-card fade-in">
+                    <img src="placeholder-figma1.jpg" alt="Figma Design 1" class="project-image">
+                    <div class="project-content">
+                        <h3>Figma Design Project</h3>
+                        <p>Showcase your UI/UX design skills with Figma projects.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-figma"></i> View in Figma</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flutter Designs -->
+                <div class="project-card fade-in">
+                    <img src="placeholder-flutter1.jpg" alt="Flutter Design 1" class="project-image">
+                    <div class="project-content">
+                        <h3>Flutter UI Design</h3>
+                        <p>Mobile app UI designs created with Flutter.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canva Designs -->
+                <div class="project-card fade-in">
+                    <img src="placeholder-canva1.jpg" alt="Canva Design 1" class="project-image">
+                    <div class="project-content">
+                        <h3>Canva Design</h3>
+                        <p>Graphic designs and social media content created with Canva.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-palette"></i> View Design</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Interested in collaborating? Let's connect!</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add smooth scrolling to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation to elements when they become visible
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordani Welcome!</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --primary-color: #0d1117; /* Dark background */
+            --accent-color: #0f9d58; /* Google Green for accent */
+            --text-color: #ffffff;
+            --secondary-text: #a8a8a8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(15, 157, 88, 0.2);
+        }
+        .tab-button.active {
+            border-bottom: 3px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold tracking-wider text-white">
+                <span class="text-[--accent-color]">JANE</span> DOE
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#projects" class="text-white hover:text-[--accent-color] transition">Projects</a>
+                <a href="#skills" class="text-white hover:text-[--accent-color] transition">Skills</a>
+                <a href="#about" class="text-white hover:text-[--accent-color] transition">About</a>
+                <a href="#contact" class="text-white hover:text-[--accent-color] transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl">
+                <p class="text-[--accent-color] text-lg mb-4 uppercase tracking-widest font-semibold">
+                    Multi-Disciplinary Professional
+                </p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-6">
+                    I build, analyze, and design user experiences that matter.
+                </h1>
+                <p class="text-[--secondary-text] text-xl mb-10 max-w-2xl mx-auto">
+                    A unique blend of expertise in **Data Science**, **Full-Stack Development**, and **UI/UX Design** with tools like Figma, Flutter, and Python.
+                </p>
+                <a href="#projects" class="bg-[--accent-color] text-gray-900 font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-opacity-90 transition transform hover:scale-[1.02] inline-block">
+                    View My Featured Work
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Skills Section -->
+        <section id="skills" class="py-20 px-6 border-t border-gray-800">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    Core <span class="text-[--accent-color]">Expertise</span>
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Skill Group 1: Web Development -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4 text-[--accent-color]">Web Development</h3>
+                        <p class="text-[--secondary-text] mb-6">Building fast, responsive, and scalable web applications.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> React, Next.js, Vue.js</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"></path></svg> Node.js, Express, Python/Flask</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg> MongoDB, PostgreSQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Group 2: Data Science & Analytics -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4 text-[--accent-color]">Data Science</h3>
+                        <p class="text-[--secondary-text] mb-6">Transforming raw data into actionable insights and visualizations.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2c-2.433 0-5.594 3.123-7.5 5.5l.006.006"></path></svg> Python (Pandas, Scikit-learn)</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 3-3 3 3m-6-6l-3 3-3-3m0 0l-3 3-3-3"></path></svg> SQL, Data Warehousing</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v10l-12 3z"></path></svg> Tableau, Power BI, Matplotlib</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Group 3: UI/UX & Design -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4 text-[--accent-color]">UI/UX & Design</h3>
+                        <p class="text-[--secondary-text] mb-6">Designing intuitive, beautiful interfaces that prioritize the user.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5z"></path></svg> Figma, Sketch, Prototyping</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> Flutter (Dart), Responsive Layouts</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.121-7.072a7 7 0 010 9.9m2.121-9.89l.354-.354a2 2 0 000-2.828l-.354-.354a2 2 0 00-2.828 0l-.354.354m-4.5 9.49l-.353.353a2 2 0 01-2.828 0l-.354-.353a2 2 0 010-2.828l.353-.354m-2.121 2.121l-.353.353a4.975 4.975 0 010 7.072"></path></svg> Design Systems, Canva Pro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Projects Showcase -->
+        <section id="projects" class="py-20 px-6 border-t border-gray-800">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    Featured <span class="text-[--accent-color]">Projects</span>
+                </h2>
+
+                <!-- Project Tabs (UI Showcase) -->
+                <div class="flex justify-center mb-12 border-b border-gray-700/50">
+                    <button class="tab-button active text-lg font-medium py-3 px-6 mx-2 transition" data-category="all">All Projects</button>
+                    <button class="tab-button text-lg font-medium py-3 px-6 mx-2 transition" data-category="web">Web Dev</button>
+                    <button class="tab-button text-lg font-medium py-3 px-6 mx-2 transition" data-category="data">Data Science</button>
+                    <button class="tab-button text-lg font-medium py-3 px-6 mx-2 transition" data-category="design">Design & UI/UX</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Cards will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. About & Contact -->
+        <section id="about" class="py-20 px-6 border-t border-gray-800 bg-gray-900">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    A Little <span class="text-[--accent-color]">About Me</span>
+                </h2>
+                <div class="text-[--secondary-text] text-lg space-y-6">
+                    <p>My journey sits at the cross-section of **Data-Driven Analysis** and **Human-Centered Design**. While I can write clean, scalable code for a full-stack application (Web Dev), I'm equally passionate about ensuring that application has an intuitive and visually compelling interface (Figma, Flutter).</p>
+                    <p>I believe that the best products are those where the data informs the design, and the development ensures flawless execution. My background allows me to bridge the gap between technical teams and creative goals, making me a versatile asset on any project.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="py-20 px-6 border-t border-gray-800">
+            <div class="container mx-auto max-w-2xl text-center">
+                <h2 class="text-4xl font-bold mb-4">
+                    Ready to collaborate?
+                </h2>
+                <p class="text-[--secondary-text] text-xl mb-10">
+                    I am currently open to new opportunities that challenge my unique skillset.
+                </p>
+                <a href="mailto:contact@example.com" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-gray-600 transition transform hover:scale-[1.02] inline-block border-2 border-[--accent-color]">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-[--secondary-text] text-sm border-t border-gray-800 mt-10">
+        <p>&copy; 2024 Jane Doe. All rights reserved. Built to showcase UI skills.</p>
+    </footer>
+
+    <!-- JavaScript for Project Filtering -->
+    <script>
+        // Data for all projects
+        const allProjects = [
+            {
+                id: 1,
+                title: "E-commerce Mobile App Redesign",
+                category: "design",
+                tools: "Figma, User Testing",
+                description: "Complete UI/UX overhaul for an apparel e-commerce platform. Focused on clear navigation and checkout flow.",
+                link: "#",
+                image: "https://placehold.co/600x400/0f9d58/ffffff?text=Figma+Design+Mockup"
+            },
+            {
+                id: 2,
+                title: "Real-Time Stock Analysis Dashboard",
+                category: "data",
+                tools: "Python (Dash), SQL, Matplotlib",
+                description: "Interactive data visualization dashboard for tracking and predicting stock price movements using time-series analysis.",
+                link: "#",
+                image: "https://placehold.co/600x400/3cba54/ffffff?text=Data+Dashboard+Preview"
+            },
+            {
+                id: 3,
+                title: "Full-Stack Project Management Tool",
+                category: "web",
+                tools: "React, Node.js, MongoDB",
+                description: "A responsive, single-page application for collaborative task management with drag-and-drop functionality.",
+                link: "#",
+                image: "https://placehold.co/600x400/4285f4/ffffff?text=Web+App+Screenshot"
+            },
+            {
+                id: 4,
+                title: "Personal Finance Flutter App",
+                category: "design", // Flutter design grouped under 'design'
+                tools: "Flutter, Dart, Figma",
+                description: "Designed and prototyped a cross-platform mobile app for budget tracking, emphasizing custom material design and animations.",
+                link: "#",
+                image: "https://placehold.co/600x400/db4437/ffffff?text=Flutter+UI+Screens"
+            },
+            {
+                id: 5,
+                title: "Social Media Marketing Templates",
+                category: "design", // Canva design grouped under 'design'
+                tools: "Canva Pro, Branding Guide",
+                description: "A suite of 50+ branded templates for fast, consistent content creation across multiple social platforms.",
+                link: "#",
+                image: "https://placehold.co/600x400/f4b400/ffffff?text=Canva+Asset+Preview"
+            },
+            {
+                id: 6,
+                title: "Customer Churn Prediction Model",
+                category: "data",
+                tools: "Scikit-learn, Jupyter, Pandas",
+                description: "Built a classification model (92% accuracy) to identify high-risk customers, presented with a detailed report.",
+                link: "#",
+                image: "https://placehold.co/600x400/0f9d58/ffffff?text=ML+Model+Results"
+            }
+        ];
+
+        const projectGrid = document.getElementById('project-grid');
+        const tabButtons = document.querySelectorAll('.tab-button');
+
+        /**
+         * Generates the HTML for a single project card.
+         * @param {object} project - The project object.
+         */
+        function createProjectCard(project) {
+            return `
+                <div class="project-card bg-gray-800 rounded-xl overflow-hidden shadow-xl border border-gray-700">
+                    <img src="${project.image}" alt="${project.title} Preview" class="w-full h-48 object-cover object-center border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2f3337/ffffff?text=Project+Image';">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-[--accent-color]">${project.category.toUpperCase()}</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">${project.title}</h3>
+                        <p class="text-[--secondary-text] text-sm mb-4">${project.description}</p>
+                        <p class="text-xs text-gray-500 mb-4">Tools: ${project.tools}</p>
+                        <a href="${project.link}" class="text-[--accent-color] hover:text-white font-semibold flex items-center transition">
+                            View Case Study
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        /**
+         * Renders projects based on the selected category.
+         * @param {string} category - The category key ('all', 'web', 'data', 'design').
+         */
+        function renderProjects(category) {
+            projectGrid.innerHTML = '';
+            const filteredProjects = category === 'all'
+                ? allProjects
+                : allProjects.filter(p => p.category === category);
+
+            if (filteredProjects.length === 0) {
+                projectGrid.innerHTML = '<p class="col-span-full text-center text-xl text-gray-500 py-10">No projects found in this category yet. Check back soon!</p>';
+                return;
+            }
+
+            filteredProjects.forEach(project => {
+                projectGrid.innerHTML += createProjectCard(project);
+            });
+        }
+
+        /**
+         * Handles the click event for the tab buttons.
+         * @param {Event} event - The click event.
+         */
+        function handleTabClick(event) {
+            const selectedCategory = event.target.dataset.category;
+
+            // Remove 'active' class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add 'active' class to the clicked button
+            event.target.classList.add('active');
+
+            // Render the filtered projects
+            renderProjects(selectedCategory);
+        }
+
+        // Attach event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', handleTabClick);
+        });
+
+        // Initial render: show all projects when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects('all');
+        });
+    </script>
+</body>
+</html>
